@@ -1,0 +1,29 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.4"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "electron-store": "^8.2.0"
+  },
+  "build": {
+    "appId": "com.wishlee.app",
+    "productName": "chatchat",
+    "mac": {
+      "icon": "assets/icon/icons8-chat-80.icns"
+    },
+    "files": [
+      "lib/**",
+      "assets/**"
+    ]
+  }
+}
