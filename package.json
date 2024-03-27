@@ -1,29 +1,37 @@
 {
-  "name": "chatapp",
+  "private": true,
+  "name": "chatchat",
+  "description": "Tray url to system bar on macos",
   "version": "1.0.0",
-  "description": "",
-  "main": "lib/main.js",
+  "author": "wishlee",
+  "main": "app/background.js",
   "scripts": {
-    "start": "electron ."
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^29.1.4"
+    "dev": "nextron",
+    "build": "nextron build",
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "electron-store": "^8.2.0"
+    "electron-serve": "^1.3.0",
+    "electron-store": "^8.2.0",
+    "react-native-webview": "^13.8.2"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "antd": "^4.22.8",
+    "electron": "^28.2.1",
+    "electron-builder": "^24.9.1",
+    "next": "^12.3.4",
+    "nextron": "^8.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
   },
   "build": {
     "appId": "com.wishlee.app",
-    "productName": "chatchat",
     "mac": {
       "icon": "assets/icon/icons8-chat-80.icns"
-    },
-    "files": [
-      "lib/**",
-      "assets/**"
-    ]
+    }
   }
 }
